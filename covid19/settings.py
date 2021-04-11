@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'covid19API',
     'django_celery_results',
+    'django_filters',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -145,3 +146,13 @@ CACHES = {
 #CELERY_TASK_SERIALIZER = 'json'
 #CELERY_RESULT_SERIALIZER = 'json'
 #CELERY_TIMEZONE = 'UTC'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
