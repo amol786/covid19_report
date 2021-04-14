@@ -89,7 +89,7 @@ def update_coviddata():
         data = {'country':country, 'total_case':total_case,'total_death': total_death,'total_recovered':total_recovered,
         'active_case':active_case,'population':population,'recovery_rate':recovery_rate,'percentage_population_infected':per_pop_infected}
         
-        CovidReport.objects.filter(country=country).update(**data)
+        CovidReport.objects.filter(id=id_val,country=country).update(**data)
         sleep(5)
     
 create_coviddata()

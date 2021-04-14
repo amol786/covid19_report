@@ -21,3 +21,7 @@ class ListCovidReportView(generics.ListAPIView):
     search_fields = ['country', ]
     ordering_fields = '__all__'
     pagination_class = StandardResultsSetPagination
+
+class DetailCovidReportView(generics.RetrieveAPIView):
+    queryset = CovidReport.objects.all()
+    serializer_class = CovidReportSerialozer

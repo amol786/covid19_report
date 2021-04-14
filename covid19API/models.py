@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class CovidReport(models.Model):
+    id = models.AutoField(primary_key=True)
     country = models.CharField(max_length=40)
     total_case = models.CharField(max_length=500)
     total_death = models.CharField(max_length=500)

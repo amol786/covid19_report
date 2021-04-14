@@ -5,4 +5,5 @@ class CovidReportSerialozer(serializers.ModelSerializer):
     class Meta:
         model = CovidReport
         fields ='__all__'
-        
+
+
